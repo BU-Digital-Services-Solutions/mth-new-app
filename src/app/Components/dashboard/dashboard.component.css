@@ -1,0 +1,19 @@
+mat-drawer-container{
+    height: 100%;
+}
+mat-drawer mat-drawer-content{
+padding: 16px;
+}
+mat-drawer{
+    background-color: #21508C;
+    width: 230px;
+}
+.side-nav-content a{
+color: #FFFFFF;
+opacity: 0.82;
+}
+.sub-nav{
+    background-color: #E7F1F9;
+    box-shadow: none;
+
+}

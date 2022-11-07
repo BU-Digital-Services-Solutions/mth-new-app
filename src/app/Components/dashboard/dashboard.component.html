@@ -1,0 +1,27 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" [(opened)]="opened">
+        <mat-nav-list role="list" class="side-nav-content">
+            <a mat-list-item role="listitem"><mat-icon>dashboard</mat-icon>Dashboard</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem"><mat-icon>library_books</mat-icon>Regulations</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem">Standards</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem"><mat-icon>star</mat-icon>Guidelines</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem"><mat-icon>verified_user</mat-icon>Regulatory Compliance</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem"><mat-icon></mat-icon>Regulatory Intelligence</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem"><mat-icon></mat-icon>Regulatory Watch</a>
+            <mat-divider></mat-divider>
+            <a mat-list-item role="listitem"><mat-icon>settings</mat-icon>Settings</a>
+          </mat-nav-list>          
+    </mat-drawer>
+    <mat-drawer-content>
+        <button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+        <mat-card class="sub-nav">
+            asdf
+        </mat-card>
+        </mat-drawer-content>
+</mat-drawer-container>
