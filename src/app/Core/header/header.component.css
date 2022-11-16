@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }  
+.db-headder{
+    background-color: #FFFFFF;
+}
+.logo{
+    text-decoration: none;
+    color: #0F67AD;
+}
+.profile{
+    text-decoration: none;
+    color: #0F67AD;
+    background-color: #F2F6FA;
+    border-radius: 30px;
+    font-size: medium;
+}

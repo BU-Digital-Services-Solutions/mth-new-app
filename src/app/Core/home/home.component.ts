@@ -8,18 +8,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router:Router) {
+  constructor() {}
 
-   }
-routpath="";
-
-  ngOnInit(): void {
-    console.log("asdf");
-    console.log(this.router.url );
-    
-   this.routpath=this.router.url;
-  }
-
-
+  ngOnInit(): void {}
 
 }

@@ -1,22 +1,26 @@
-<div class="login" fxLayoutAlign="center center" fxFlexFill>
+<app-home-header></app-home-header>
+<div style="position: fixed; width: 100vw;height: 100vh;">
+<div class="login" fxLayoutAlign="center center">
 <mat-card fxFlex="25" class="login-bg">
-    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form"
+    [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <mat-toolbar class="login-headding" fxLayoutAlign="center center">
           <p>Login to Cyientify</p>
         </mat-toolbar>
         <mat-form-field appearance="outline">
-          <input type="email" matInput placeholder="Enter your Email ID">
+          <input type="email" matInput placeholder="Enter your Email ID" formControlName="email">
           <mat-icon matSuffix>alternate_email</mat-icon>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input type="password" matInput placeholder="Enter your Password">
+            <input type="password" matInput placeholder="Enter your Password" formControlName="password">
             <mat-icon matSuffix>vpn_key</mat-icon>
         </mat-form-field>
         <mat-toolbar class="asdf">
-            <a routerLink="forgot-password" class="forgot-password">Forgot Password?</a>
+            <a [routerLink]="'/forgot-password'" class="forgot-password">Forgot Password?</a>
             <span class="example-spacer"></span>
-            <button mat-raised-button class="login-btn"><a routerLink="login">Login</a></button>
+            <button mat-raised-button class="login-btn" type="submit">Login</button>
         </mat-toolbar>
       </form>    
 </mat-card>
+</div>
 </div>

@@ -1,5 +1,6 @@
-<mat-drawer-container>
-    <mat-drawer mode="side" [(opened)]="opened">
+<app-header></app-header>
+<mat-drawer-container autosize>
+    <mat-drawer mode="side" [(opened)]="opened" >
         <mat-nav-list role="list" class="side-nav-content">
             <a mat-list-item role="listitem"><mat-icon>dashboard</mat-icon>Dashboard</a>
             <mat-divider></mat-divider>
@@ -11,17 +12,72 @@
             <mat-divider></mat-divider>
             <a mat-list-item role="listitem"><mat-icon>verified_user</mat-icon>Regulatory Compliance</a>
             <mat-divider></mat-divider>
-            <a mat-list-item role="listitem"><mat-icon></mat-icon>Regulatory Intelligence</a>
+            <a mat-list-item role="listitem"><mat-icon> highlight</mat-icon>
+                Regulatory Intelligence</a>
             <mat-divider></mat-divider>
-            <a mat-list-item role="listitem"><mat-icon></mat-icon>Regulatory Watch</a>
+            <a mat-list-item role="listitem"><mat-icon>flip_to_back</mat-icon>
+                Regulatory Watch</a>
             <mat-divider></mat-divider>
             <a mat-list-item role="listitem"><mat-icon>settings</mat-icon>Settings</a>
           </mat-nav-list>          
     </mat-drawer>
     <mat-drawer-content>
-        <button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
-        <mat-card class="sub-nav">
-            asdf
-        </mat-card>
-        </mat-drawer-content>
+        <button (click)="opened=!opened"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <mat-tab-group class="sub-nav">
+            <mat-tab label="By tag" class="reg-by-tag"> 
+                <mat-card>
+                <mat-toolbar class="sub-nav-headding">
+                    <p class="reg-hed">All Regulations (125)</p>
+                    <span class="example-spacer"></span>
+                    <button mat-raised-button class="import-regulation"><mat-icon>play_for_work</mat-icon>
+                        Import Regulation</button>
+                </mat-toolbar>
+
+       <p class="reg-content">All documents listed below were published by the regulatory authority in their official language. CyientifiQ is
+        <br> separately available to provide consulting services wi
+    th respect to the regulations applicable to a particular<br> product.</p>
+<p class="serch-hedding">Search by keyword or tag</p>
+<mat-form-field appearance="outline" class="serch">
+    <input type="Serch" matInput placeholder="Ex: Risk, Safety, Alarm etc..">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <table id="customers">
+    <tr>
+      <th style="text-align: justify;"><mat-icon>save_alt</mat-icon> Document Name</th>
+      <th style="text-align: justify;">Imported</th>
+      <th style="text-align: justify;">View Source</th>
+    </tr>
+    <tr *ngFor="let item of data">
+      <td style="text-align: justify;">{{item.Document_Name}}<td>
+      <td>{{item.Imported}}</td>
+      <td>{{item.View_Source}}<td>
+    </tr>
+  </table>
+            </mat-card>
+                </mat-tab>
+
+
+
+
+                
+            <mat-tab label="By country">
+                <mat-card>
+                    
+                <mat-toolbar class="sub-nav-headding">
+                    <p class="reg-hed">All Regulations (125)</p>
+                    <span class="example-spacer"></span>
+                    <button mat-raised-button class="import-regulation"><mat-icon>play_for_work</mat-icon>
+                        Import Regulation</button>
+                </mat-toolbar>
+
+       <p class="reg-content">All documents listed below were published by the regulatory authority in their official language. CyientifiQ is
+        <br> separately available to provide consulting services wi
+    th respect to the regulations applicable to a particular<br> product.</p>
+<p class="serch-hedding">Select a country on map or from dropdown</p>
+<img src=".\assets\Images\worldmap.jpg" width="70%" height="50%">
+</mat-card>
+            </mat-tab>
+          </mat-tab-group>
+                  </mat-drawer-content>
 </mat-drawer-container>

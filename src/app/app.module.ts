@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './Shared/modules/material/material.module';
 import { LoginComponent } from './Core/login/login.component';
@@ -14,10 +15,16 @@ import { RegisterComponent } from './Core/register/register.component';
 import { CheckYourEmailComponent } from './Core/check-your-email/check-your-email.component';
 import { HomeComponent } from './Core/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeadderComponent } from './Layout/headder/headder.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
-
-
+import { PageNotFoundComponent } from './Core/page-not-found/page-not-found.component';
+import { SideNavComponent } from './Core/side-nav/side-nav.component';
+import { HeaderComponent } from './Core/header/header.component';
+import { HomeHeaderComponent } from './Core/home/home-header/home-header.component';
+import { HomeCarouselComponent } from './Core/home/home-carousel/home-carousel.component';
+import { LayoutComponent } from './layout/layout.component';
+import { RegulationsComponent } from './Components/regulations/regulations.component';
+import { ByCountryComponent } from './Components/regulations/by-country/by-country.component';
+import { RegulationsService } from './Services/regulations.service';
 
 @NgModule({
   declarations: [
@@ -29,8 +36,14 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
     RegisterComponent,
     CheckYourEmailComponent,
     HomeComponent,
-    HeadderComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent,
+    SideNavComponent,HeaderComponent, 
+    HomeHeaderComponent,
+    HomeCarouselComponent,
+    LayoutComponent,
+    RegulationsComponent,
+    ByCountryComponent
     
   ],
   imports: [
@@ -40,9 +53,10 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RegulationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
