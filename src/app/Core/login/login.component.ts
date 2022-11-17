@@ -15,10 +15,10 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router){}
   
   ngOnInit(): void {
-  // this.http.get('https://medicalplatformapim.azure-api.net/mrpapi/StandardsPage').subscribe(data=>{
+  // this.http.get('https://mrp-function-app-1.azurewebsites.net/api/StandardsPage').subscribe(data=>{
   //  console.log(data)
 
-  //   })
+  //  })
 
     this.loginForm = new FormGroup({
       email: new FormControl(''),
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     if(this.loginForm.value.email === 'a@a.com' && this.loginForm.value.password === '123') {
       console.log(this.loginForm.value);
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/layout']);
     }
   }
 

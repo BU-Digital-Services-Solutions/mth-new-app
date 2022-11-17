@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegulationsService } from 'src/app/Services/regulations.service';
+// import { RegulationsService } from 'src/app/Services/regulations.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,14 +7,14 @@ import { RegulationsService } from 'src/app/Services/regulations.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  opened = false;
-  data:any;
-  constructor( private user:RegulationsService) {
-    this.user.getbytag().subscribe(data=>{
-      console.warn(data)
-      this.data=data
-    })
-   }
+  // opened = false;
+  // data:any;
+  // constructor( private user:RegulationsService) {
+  //   this.user.getbytag().subscribe(data=>{
+  //     console.warn(data)
+  //     this.data=data
+  //   })
+  //  }
 
   ngOnInit(): void {
   }

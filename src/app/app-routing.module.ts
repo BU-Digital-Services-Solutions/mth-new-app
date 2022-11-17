@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './Core/page-not-found/page-not-found.comp
 import { PasswordResetSuccessfulComponent } from './Core/password-reset-successful/password-reset-successful.component';
 import { RegisterComponent } from './Core/register/register.component';
 import { ResetPasswordComponent } from './Core/reset-password/reset-password.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {path :'', component:HomeCarouselComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path :'reset-password', component: ResetPasswordComponent},
   {path :'password-reset-successful', component: PasswordResetSuccessfulComponent},
   {path :'check-your-email', component:CheckYourEmailComponent},
-  {path:'dashboard', component:DashboardComponent},
+  {path:'', component:DashboardComponent},
+  {path:'layout', component:LayoutComponent}
   //  {path :'**' , component:PageNotFoundComponent}
 ];
 @NgModule({

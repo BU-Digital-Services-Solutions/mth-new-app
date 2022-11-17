@@ -25,6 +25,11 @@ import { LayoutComponent } from './layout/layout.component';
 import { RegulationsComponent } from './Components/regulations/regulations.component';
 import { ByCountryComponent } from './Components/regulations/by-country/by-country.component';
 import { RegulationsService } from './Services/regulations.service';
+import { StandardsComponent } from './Components/standards/standards.component';
+import { RegulatoryComplianceComponent } from './Components/regulatory-compliance/regulatory-compliance.component';
+import { RegulatoryIntelligenceComponent } from './Components/regulatory-intelligence/regulatory-intelligence.component';
+import { SettingsComponent } from './Components/settings/settings.component';
+import { RegulatoryWatchComponent } from './Components/regulatory-watch/regulatory-watch.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,12 @@ import { RegulationsService } from './Services/regulations.service';
     HomeCarouselComponent,
     LayoutComponent,
     RegulationsComponent,
-    ByCountryComponent
+    ByCountryComponent,
+    StandardsComponent,
+    RegulatoryComplianceComponent,
+    RegulatoryIntelligenceComponent,
+    SettingsComponent,
+    RegulatoryWatchComponent
     
   ],
   imports: [
